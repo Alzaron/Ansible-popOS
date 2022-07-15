@@ -10,10 +10,8 @@ os_packages:
   - nmap
   - vim
   - plocate
-  - samba
   - zsh-autosuggestions
   - zsh-syntax-highlighting
-  - mergerfs
 
 
 container_rootless_user: "{{ ansible_user_id }}"
