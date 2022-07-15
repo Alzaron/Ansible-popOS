@@ -1,0 +1,28 @@
+---
+
+- name: List user with home directory
+  shell: ls -1 /home
+  register: linux_users
+  changed_when: false
+  when: user_list == []
+
+- name: Set linux_users to list
+  set_fact:
+    user_list: "{{ linux_users.stdout_lines | list + ['root'] }}"
+  when: user_list == []
+
+
+
+- name: Package | Install os packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ os_packages }}"
+  become: true
+
+- name: Installing docker
+  import_tasks: "docker.yml"
+  when: docker_install
+  tags: always
+  become: true
+

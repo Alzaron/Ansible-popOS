@@ -1,0 +1,12 @@
+---
+- hosts: "*"
+  vars_files:
+    - defaults/main.yml
+  
+  
+  roles:
+    - { role: diodonfrost.p10k } 
+  tasks:
+    - name: Playbook entry
+      include_tasks: tasks/main.yml
+      tags: always

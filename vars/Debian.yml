@@ -1,0 +1,25 @@
+---
+os_packages:
+  - aptitude
+  - git
+  - zsh
+  - neovim
+  - tmux
+  - python3-pip
+  - python3-venv
+  - nmap
+  - vim
+  - plocate
+  - samba
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
+  - mergerfs
+
+
+container_rootless_user: "{{ ansible_user_id }}"
+
+docker_packages_requirement:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
