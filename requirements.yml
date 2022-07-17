@@ -1,4 +1,7 @@
 ---
 # p10k
 - name: diodonfrost.p10k
-- name: diodonfrost.ohmyzsh
+- src: https://github.com/Alzaron/ansible-role-ohmyzsh.git
+  version: 1.0.2
+  name: diodonfrost.ohmyzsh
+- name: gantsign.visual-studio-code

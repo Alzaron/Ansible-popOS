@@ -9,6 +9,7 @@
     - role: diodonfrost.p10k
       vars:
         zsh_plugin: ohmyzsh
+    - role: gantsign.visual-studio-code
   tasks:
     - name: Playbook entry
       include_tasks: tasks/main.yml
