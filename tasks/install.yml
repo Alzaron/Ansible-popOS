@@ -26,3 +26,8 @@
   tags: always
   become: true
 
+- name: Installing bspwm
+  import_tasks: "bspwm.yml"
+  when: bspwm_install
+  tags: always
+  become: true

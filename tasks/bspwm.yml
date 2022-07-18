@@ -1,0 +1,7 @@
+---
+
+- name: install bspwm and polybar
+  apt:
+    name: 
+      - bspwm
+      - polybar

@@ -3,7 +3,7 @@
 docker_install: true
 awscli_install: false
 minikube_install: false
-
+bspwm_install: true
 
 
 
@@ -11,8 +11,17 @@ user_list: []
 
 
 p10k_repository_url: 'https://github.com/romkatv/powerlevel10k.git'
-zsh_plugin: zsh
+zsh_plugin: ohmyzsh
 p10k_transient_prompt: "yes"
 p10k_users: "{{ ansible_user_id }}"
 p10k_prompt_style: "lean"
+ohmyzsh_theme: powerlevel10k/powerlevel10k
 
+
+hashicorp_products:
+  - name: consul
+  - name: nomad
+  - name: packer
+  - name: terraform
+  - name: vagrant
+  - name: vault

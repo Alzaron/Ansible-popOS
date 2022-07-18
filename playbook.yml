@@ -2,15 +2,17 @@
 - hosts: "localhost"
   vars_files:
     - defaults/main.yml
-  roles:
-    - role: diodonfrost.ohmyzsh
-      vars:
-        ohmyzsh_theme: powerlevel10k/powerlevel10k
-    - role: diodonfrost.p10k
-      vars:
-        zsh_plugin: ohmyzsh
-    - role: gantsign.visual-studio-code
   tasks:
     - name: Playbook entry
       include_tasks: tasks/main.yml
       tags: always
+
+  roles:
+    - role: gantsign.golang
+    - role: diodonfrost.ohmyzsh
+    - role: diodonfrost.p10k
+    - role: gantsign.visual-studio-code
+
+  become: yes
+  roles:
+    - role: buluma.hashicorp
