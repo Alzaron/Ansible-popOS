@@ -4,5 +4,4 @@
     name: 
       - wine
       - lutris
-      - lib32-vkd3d
     state: present

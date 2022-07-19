@@ -3,5 +3,4 @@
   apt:
     name: 
       - discord
-      - wire-desktop
     state: present

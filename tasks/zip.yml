@@ -7,7 +7,6 @@
       - p7zip
       - unrar
       - unzip
-      - xz
       - tar
       - gzip
       - bzip2

@@ -32,7 +32,7 @@
   tags: always
   become: true
 
-- name: Installing zip
+- name: Installing zips
   import_tasks: "zip.yml"
   when: zip_install
   tags: always
