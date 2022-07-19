@@ -1,0 +1,7 @@
+---
+- name: gaming packages
+  apt:
+    name: 
+      - discord
+      - wire-desktop
+    state: present

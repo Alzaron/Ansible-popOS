@@ -1,0 +1,15 @@
+---
+
+- name: install bspwm and polybar
+  apt:
+    name: 
+      - atool
+      - p7zip
+      - unrar
+      - unzip
+      - xz
+      - tar
+      - gzip
+      - bzip2
+      - zip
+    state: present

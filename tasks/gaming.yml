@@ -1,0 +1,8 @@
+---
+- name: gaming packages
+  apt:
+    name: 
+      - wine
+      - lutris
+      - lib32-vkd3d
+    state: present

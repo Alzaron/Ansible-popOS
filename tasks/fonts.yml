@@ -1,0 +1,7 @@
+---
+
+- name: install font awsome
+  apt:
+    name:
+      - fonts-font-awesome
+    state: present

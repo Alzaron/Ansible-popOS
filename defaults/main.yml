@@ -4,7 +4,10 @@ docker_install: true
 awscli_install: false
 minikube_install: false
 bspwm_install: true
-
+chat_install: true
+gaming_install: true
+fonts_install: true
+zip_install: true
 
 
 user_list: []
