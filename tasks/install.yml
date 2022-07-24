@@ -22,30 +22,30 @@
 
 - name: Installing docker
   import_tasks: "docker.yml"
-  when: docker_install
+  when: install_docker
   tags: always
   become: true
 
 - name: Installing fonts
   import_tasks: "fonts.yml"
-  when: fonts_install
+  when: install_fonts
   tags: always
   become: true
 
 - name: Installing zips
   import_tasks: "zip.yml"
-  when: zip_install
+  when: install_zip
   tags: always
   become: true
 
 - name: Installing gaming
   import_tasks: "gaming.yml"
-  when: gaming_install
+  when: install_gaming
   tags: always
   become: true
 
 - name: Installing chat
   import_tasks: "chat.yml"
-  when: chat_install
+  when: install_chat
   tags: always
   become: true

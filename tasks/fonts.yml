@@ -1,5 +1,4 @@
 ---
-
 - name: install font awsome
   apt:
     name:

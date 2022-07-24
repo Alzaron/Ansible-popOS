@@ -1,22 +1,30 @@
 ---
+username: none
 
-docker_install: true
-awscli_install: false
-minikube_install: false
-bspwm_install: true
-chat_install: true
-gaming_install: true
-fonts_install: true
-zip_install: true
+
+
+install_docker: true
+install_awscli: false
+install_minikube: false
+install_bspwm: true
+install_chat: true
+install_fonts: true
+install_zip: true
+install_dotfiles: true
+install_gaming: true
 
 
 user_list: []
 
+dotfiles:
+    url: https://github.com/alzaron/dotfiles.git
+    destination: movetodotfile
+    rcup_flags: -fx README.md
 
 p10k_repository_url: 'https://github.com/romkatv/powerlevel10k.git'
 zsh_plugin: ohmyzsh
 p10k_transient_prompt: "yes"
-p10k_users: "{{ ansible_user_id }}"
+p10k_users: "{{ username }}"
 p10k_prompt_style: "lean"
 ohmyzsh_theme: powerlevel10k/powerlevel10k
 

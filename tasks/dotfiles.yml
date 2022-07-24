@@ -1,0 +1,29 @@
+- name: Clone user dotfiles
+  git: repo={{ dotfiles.url }} dest=/tmp/{{ dotfiles.destination }} accept_hostkey=yes update=no
+  become: yes
+  force: yes
+  become_user: "{{ username }}"
+
+- name: move and replace .config
+  ansible.builtin.copy:
+    src: /tmp/movetodotfile/.config
+    dest: /home/{{ username }}
+    force: yes
+    owner: "{{ username }}"
+    group: "{{ username }}"
+
+- name: move and replace mountain background
+  copy:
+   src: background
+   dest: /home/{{ username }}/Pictures
+   force: False
+   mode: u+rw,g+xr,o+x
+
+- name: move and replace .zshrc
+  ansible.builtin.copy:
+    src: /tmp/movetodotfile/.zshrc
+    dest: /home/{{ username }}
+    force: yes
+    owner: "{{ username }}"
+    group: "{{ username }}"
+
