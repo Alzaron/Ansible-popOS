@@ -1,7 +1,6 @@
 - name: Clone user dotfiles
-  git: repo={{ dotfiles.url }} dest=/tmp/{{ dotfiles.destination }} accept_hostkey=yes update=no
+  git: repo={{ dotfiles.url }} dest=/tmp/{{ dotfiles.destination }} accept_hostkey=yes update=no force=yes
   become: yes
-  force: yes
   become_user: "{{ username }}"
 
 - name: move and replace .config
