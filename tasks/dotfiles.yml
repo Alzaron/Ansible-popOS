@@ -26,3 +26,12 @@
     owner: "{{ username }}"
     group: "{{ username }}"
 
+- name: give execute permision to bspwm
+  file: 
+  path: ~/.config/bspwm/bspwmrc
+  mode: a+x
+
+- name: give execute permision to poly script
+  file: 
+  path: ~/.config/polybar/launch.sh
+  mode: a+x 
