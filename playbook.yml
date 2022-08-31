@@ -12,5 +12,5 @@
     - role: diodonfrost.ohmyzsh
     - role: diodonfrost.p10k
     - role: gantsign.visual-studio-code
-    - role: buluma.hashicorp
+      #    - role: buluma.hashicorp
   become: yes

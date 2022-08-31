@@ -12,8 +12,11 @@ os_packages:
   - plocate
   - zsh-autosuggestions
   - zsh-syntax-highlighting
-
-
+  - kitty
+  - bspwm
+  - polybar
+  - feh
+  - picom
 container_rootless_user: "{{ ansible_user_id }}"
 
 docker_packages_requirement:

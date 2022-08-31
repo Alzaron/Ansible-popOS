@@ -13,9 +13,9 @@
 
 - name: move and replace mountain background
   copy:
-   src: background
+   src: mountain.jpg
    dest: /home/{{ username }}/Pictures
-   force: False
+   force: True 
    mode: u+rw,g+xr,o+x
 
 - name: move and replace .zshrc
@@ -27,11 +27,11 @@
     group: "{{ username }}"
 
 - name: give execute permision to bspwm
-  file: 
-  path: ~/.config/bspwm/bspwmrc
-  mode: a+x
+  ansible.builtin.file: 
+    path: /home/{{ username }}/.config/bspwm/bspwmrc
+    mode: a+x
 
 - name: give execute permision to poly script
-  file: 
-  path: ~/.config/polybar/launch.sh
-  mode: a+x 
+  ansible.builtin.file: 
+    path: /home/{{ username }}/.config/polybar/launch.sh
+    mode: a+x 
