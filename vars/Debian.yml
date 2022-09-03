@@ -17,6 +17,8 @@ os_packages:
   - polybar
   - feh
   - picom
+  - rofi
+
 container_rootless_user: "{{ ansible_user_id }}"
 
 docker_packages_requirement:
